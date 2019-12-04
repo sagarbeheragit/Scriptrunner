@@ -8,8 +8,8 @@ public class ProcessBuilderExample1 {
 
         ProcessBuilder processBuilder = new ProcessBuilder();
         // Windows
-        //processBuilder.command("cmd.exe", "/c", "ping -n 3 google.com");
-        processBuilder.command("/home/ec2-user/migrator/aws/aws-serverless-java-container/samples/springboot/pet-store/deploy.sh");
+        processBuilder.command("bash", "-c", "aws cloudformation package --template-file sam.yaml --output-template-file output-sam.yaml --s3-bucket aws-serverless-springboot-petstore-1");
+        //processBuilder.command("/home/ec2-user/migrator/aws/aws-serverless-java-container/samples/springboot/pet-store/deploy.sh");
 
         try {
 
