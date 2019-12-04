@@ -8,7 +8,7 @@ public class ProcessBuilderExample1 {
 
         ProcessBuilder processBuilder = new ProcessBuilder();
         // Windows
-        processBuilder.command("bash", "-c", "aws cloudformation package --template-file sam.yaml --output-template-file output-sam.yaml --s3-bucket aws-serverless-springboot-petstore-1 ; aws cloudformation deploy --template-file output-sam.yaml --stack-name ServerlessSpringBootApp --capabilities CAPABILITY_IAM ; aws cloudformation describe-stacks --stack-name ServerlessSpringBootSample");
+        processBuilder.command("bash", "-c", "aws cloudformation package --template-file sam.yaml --output-template-file output-sam.yaml --s3-bucket aws-serverless-springboot-app-001 ; aws cloudformation deploy --template-file output-sam.yaml --stack-name ServerlessSpringBootApp --capabilities CAPABILITY_IAM ; aws cloudformation describe-stacks --stack-name ServerlessSpringBootSample");
         //processBuilder.command("/home/ec2-user/migrator/aws/aws-serverless-java-container/samples/springboot/pet-store/deploy.sh");
 
         try {
